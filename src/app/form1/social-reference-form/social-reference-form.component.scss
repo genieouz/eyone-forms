@@ -1,0 +1,26 @@
+/* ... autres styles ... */
+.autocomplete {
+  position: relative;
+}
+.autocomplete .autocomplete-list {
+  position: absolute;
+  top: 70px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  z-index: 1000;
+  width: calc(100% - 32px); /* Adjust the width based on your actual + button width */
+  max-height: 200px;
+  overflow-y: auto;
+
+}
+
+.autocomplete .autocomplete-item {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.autocomplete .autocomplete-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* ... */

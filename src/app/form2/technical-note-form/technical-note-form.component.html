@@ -1,0 +1,36 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+  <div class="form-row">
+    <div class="form-field">
+      <label for="noteNumber">N°</label>
+      <input type="text" id="noteNumber" formControlName="noteNumber">
+    </div>
+    <div class="form-field">
+      <label for="date">Date</label>
+      <input type="date" id="date" formControlName="date">
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label for="subject">Objet</label>
+    <input type="text" id="subject" formControlName="subject">
+  </div>
+
+  <div class="form-field">
+    <label for="situationDescription">Description de la situation</label>
+    <textarea id="situationDescription" formControlName="situationDescription"></textarea>
+  </div>
+
+  <div class="form-field">
+    <label for="situationAnalysis">Analyse de la situation</label>
+    <textarea id="situationAnalysis" formControlName="situationAnalysis"></textarea>
+  </div>
+
+  <div class="form-field">
+    <label for="solutionsProposal">Proposition de solutions</label>
+    <textarea id="solutionsProposal" formControlName="solutionsProposal"></textarea>
+  </div>
+
+  <div class="form-button">
+    <button type="submit" [disabled]="!form.valid">Soumettre</button>
+  </div>
+</form>

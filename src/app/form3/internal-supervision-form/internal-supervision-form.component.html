@@ -1,0 +1,57 @@
+<!-- InternalSupervisionFormComponent.html -->
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+
+  <div class="form-row">
+    <label for="activityDate">Date de l'activité</label>
+    <input type="date" id="activityDate" formControlName="activityDate" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="activityType">Type de l'activité</label>
+    <input type="text" id="activityType" formControlName="activityType" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="location">Lieu</label>
+    <input type="text" id="location" formControlName="location" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="target">Cible</label>
+    <input type="text" id="target" formControlName="target" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="beneficiariesNumber">Nombre de bénéficiaires</label>
+    <input type="number" id="beneficiariesNumber" formControlName="beneficiariesNumber" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="responsiblePersons">Personnes responsables de l'activité</label>
+    <input type="text" id="responsiblePersons" formControlName="responsiblePersons" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="activityProcess">Déroulement de l'activité</label>
+    <textarea id="activityProcess" formControlName="activityProcess" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="strengths">Points forts</label>
+    <textarea id="strengths" formControlName="strengths" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="weaknesses">Points faibles</label>
+    <textarea id="weaknesses" formControlName="weaknesses" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="recommendations">Recommandations</label>
+    <textarea id="recommendations" formControlName="recommendations" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row form-button">
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Soumettre</button>
+  </div>
+</form>

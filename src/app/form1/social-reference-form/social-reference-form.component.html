@@ -1,0 +1,82 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="header">Entête</label>
+      <input type="text" id="header" formControlName="header">
+    </div>
+    <div class="form-field">
+      <label for="location">Lieu</label>
+      <input type="text" id="location" formControlName="location">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="date">Date</label>
+      <input type="date" id="date" formControlName="date">
+    </div>
+    <div class="form-field">
+      <label for="referenceTime">Heure de référence</label>
+      <input type="time" id="referenceTime" formControlName="referenceTime">
+    </div>
+  </div>
+
+  <div class="form-field">
+    <label for="referenceStructure">Structure de référence</label>
+    <input type="text" id="referenceStructure" formControlName="referenceStructure">
+  </div>
+    <!-- SocialReferenceFormComponent.html -->
+
+
+  <div class="form-row">
+    <div class="form-field">
+      <div class="form-row autocomplete">
+        <label for="patientName">Prénom et nom du patient:</label>
+        <div style="font-size: 13px">hint: type "Ousmane or henri"</div>
+        <input type="text"
+              id="patientFullName"
+              formControlName="patientFullName"
+              (input)="onSearchPatient($event)"
+              (focus)="showAutocomplete=true"
+              (blur)="hideAutocomplete()"
+              class="form-control">
+        <button type="button" (click)="onAddPatient()">+</button>
+        <div *ngIf="showAutocomplete" class="autocomplete-list">
+          <div *ngFor="let patient of filteredPatients"
+              (click)="selectPatient(patient)"
+              class="autocomplete-item">
+            {{ patient.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="patientId">NIUP</label>
+      <input type="text" id="patientId" formControlName="patientId">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="referenceReason">Motif de référence:</label>
+    <select id="referenceReason" formControlName="referenceReason" class="form-control">
+      <option *ngFor="let reason of referenceReasons" [value]="reason.id">{{ reason.name }}</option>
+    </select>
+    <button type="button" (click)="onAddReferenceReason()">+</button>
+  </div>
+
+  <div class="form-field">
+    <label for="socialInquirySummary">Résumé de l'enquête sociale</label>
+    <textarea id="socialInquirySummary" formControlName="socialInquirySummary"></textarea>
+  </div>
+
+  <div class="form-field">
+    <label for="observations">Observations</label>
+    <textarea id="observations" formControlName="observations"></textarea>
+  </div>
+
+  <div class="form-button">
+    <button type="submit" [disabled]="!form.valid">Soumettre</button>
+  </div>
+
+</form>

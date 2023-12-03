@@ -1,0 +1,47 @@
+<!-- TrainingThemeSheetFormComponent.html -->
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+
+  <div class="form-row">
+    <label for="activityDate">Date de l'activité</label>
+    <input type="date" id="activityDate" formControlName="activityDate" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="theme">Thème</label>
+    <input type="text" id="theme" formControlName="theme" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="location">Lieu</label>
+    <input type="text" id="location" formControlName="location" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="participants">Participants</label>
+    <input type="text" id="participants" formControlName="participants" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="responsiblePersons">Personnes responsables</label>
+    <input type="text" id="responsiblePersons" formControlName="responsiblePersons" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="trainingSupports">Supports de formation</label>
+    <textarea id="trainingSupports" formControlName="trainingSupports" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="evaluation">Évaluation</label>
+    <textarea id="evaluation" formControlName="evaluation" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="recommendations">Recommandations</label>
+    <textarea id="recommendations" formControlName="recommendations" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row form-button">
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Soumettre</button>
+  </div>
+</form>
