@@ -1,0 +1,49 @@
+<!-- social-counter-reference-form.component.html -->
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="form-container">
+
+  <div class="form-row">
+    <label for="referenceStructureId">Structure de référence:</label>
+    <select id="referenceStructureId" formControlName="referenceStructureId" class="form-control">
+      <option value="1">Option 1</option>
+      <option value="2">Option 2</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label for="welcomingStructure">Structure d'accueil:</label>
+    <input type="text" id="welcomingStructure" formControlName="welcomingStructure" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="receptionDateAndTime">Date et heure de réception:</label>
+    <input type="datetime-local" id="receptionDateAndTime" formControlName="receptionDateAndTime" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="interventions">Interventions entreprises:</label>
+    <textarea id="interventions" formControlName="interventions" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="madeAt">Fait à:</label>
+    <input type="text" id="madeAt" formControlName="madeAt" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="date">Date:</label>
+    <input type="date" id="date" formControlName="date" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="attachments">PJ (Pièces jointes):</label>
+    <input type="file" id="attachments" (change)="onFileSelected($event)" multiple class="form-control">
+  </div>
+
+
+
+  <div class="form-row form-button">
+    <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Soumettre</button>
+  </div>
+
+
+</form>

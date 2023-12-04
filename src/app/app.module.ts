@@ -10,6 +10,7 @@ import { TechnicalNoteFormComponent } from './form2/technical-note-form/technica
 import { InternalSupervisionFormComponent } from './form3/internal-supervision-form/internal-supervision-form.component';
 import { TrainingThemeSheetFormComponent } from './form4/training-theme-sheet-form/training-theme-sheet-form.component';
 import { SocialCareFormComponent } from './form5/social-care-form/social-care-form.component';
+import { SocialCounterReferenceFormComponent } from './form7/social-counter-reference-form/social-counter-reference-form.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SocialCareFormComponent } from './form5/social-care-form/social-care-fo
     TechnicalNoteFormComponent,
     InternalSupervisionFormComponent,
     TrainingThemeSheetFormComponent,
-    SocialCareFormComponent
+    SocialCareFormComponent,
+    SocialCounterReferenceFormComponent
   ],
   imports: [
     BrowserModule,

@@ -16,17 +16,12 @@
       <label for="date">Date</label>
       <input type="date" id="date" formControlName="date">
     </div>
-    <div class="form-field">
-      <label for="referenceTime">Heure de référence</label>
-      <input type="time" id="referenceTime" formControlName="referenceTime">
-    </div>
   </div>
 
   <div class="form-field">
     <label for="referenceStructure">Structure de référence</label>
     <input type="text" id="referenceStructure" formControlName="referenceStructure">
   </div>
-    <!-- SocialReferenceFormComponent.html -->
 
 
   <div class="form-row">
@@ -51,6 +46,9 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="form-row">
     <div class="form-field">
       <label for="patientId">NIUP</label>
       <input type="text" id="patientId" formControlName="patientId">
@@ -63,6 +61,12 @@
       <option *ngFor="let reason of referenceReasons" [value]="reason.id">{{ reason.name }}</option>
     </select>
     <button type="button" (click)="onAddReferenceReason()">+</button>
+  </div>
+  <div class="form-row">
+    <div class="form-field">
+      <label for="referenceTime">Heure de référence</label>
+      <input type="time" id="referenceTime" formControlName="referenceTime">
+    </div>
   </div>
 
   <div class="form-field">

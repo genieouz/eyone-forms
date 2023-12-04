@@ -21,24 +21,27 @@
   </div>
 
   <div class="form-row">
-    <label>Sexe:</label>
-    <div class="checkbox-group">
-      <input type="radio" id="genderF" formControlName="gender" value="F" class="form-control-checkbox">
-      <label for="genderF">F</label>
-      <input type="radio" id="genderM" formControlName="gender" value="M" class="form-control-checkbox">
-      <label for="genderM">M</label>
+    <div class="form-field">
+      <label>Sexe:</label>
+      <div class="checkbox-group">
+        <input type="radio" id="genderF" formControlName="gender" value="F" class="form-control-checkbox">
+        <label for="genderF">F</label>
+        <input type="radio" id="genderM" formControlName="gender" value="M" class="form-control-checkbox">
+        <label for="genderM">M</label>
+      </div>
+    </div>
+    <div class="form-field">
+      <label for="age">Âge:</label>
+      <input type="number" id="age" formControlName="age" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="birthDate">Date de naissance:</label>
+      <input type="date" id="birthDate" formControlName="birthDate" class="form-control">
     </div>
   </div>
 
-  <div class="form-row">
-    <label for="age">Âge:</label>
-    <input type="number" id="age" formControlName="age" class="form-control">
-  </div>
 
-  <div class="form-row">
-    <label for="birthDate">Date de naissance:</label>
-    <input type="date" id="birthDate" formControlName="birthDate" class="form-control">
-  </div>
+
 
   <div class="form-row">
     <label for="addressPhone">Adresse/N° Téléphone:</label>

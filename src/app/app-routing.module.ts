@@ -5,6 +5,7 @@ import { TechnicalNoteFormComponent } from './form2/technical-note-form/technica
 import { InternalSupervisionFormComponent } from './form3/internal-supervision-form/internal-supervision-form.component';
 import { TrainingThemeSheetFormComponent } from './form4/training-theme-sheet-form/training-theme-sheet-form.component';
 import { SocialCareFormComponent } from './form5/social-care-form/social-care-form.component';
+import { SocialCounterReferenceFormComponent } from './form7/social-counter-reference-form/social-counter-reference-form.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "social-care",
     component: SocialCareFormComponent
+  },
+  {
+    path: "social-counter-reference",
+    component: SocialCounterReferenceFormComponent
   }
 ];
 
