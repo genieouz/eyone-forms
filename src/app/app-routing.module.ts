@@ -5,6 +5,7 @@ import { OperativeReportFormComponent } from './form10/operative-report-form/ope
 import { EngagementFormComponent } from './form11/engagement-form/engagement-form.component';
 import { CancellationFormComponent } from './form12/cancellation-form/cancellation-form.component';
 import { PaymentMoratoriumFormComponent } from './form13/payment-moratorium-form/payment-moratorium-form.component';
+import { AccompanistCardFormComponent } from './form14/accompanist-card-form/accompanist-card-form.component';
 import { TechnicalNoteFormComponent } from './form2/technical-note-form/technical-note-form.component';
 import { InternalSupervisionFormComponent } from './form3/internal-supervision-form/internal-supervision-form.component';
 import { TrainingThemeSheetFormComponent } from './form4/training-theme-sheet-form/training-theme-sheet-form.component';
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: "payment-moratorium",
     component: PaymentMoratoriumFormComponent
+  },
+  {
+    path: "accompanist-card",
+    component: AccompanistCardFormComponent
   }
 ];
 

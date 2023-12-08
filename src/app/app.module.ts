@@ -18,6 +18,7 @@ import { OperativeReportFormComponent } from './form10/operative-report-form/ope
 import { EngagementFormComponent } from './form11/engagement-form/engagement-form.component';
 import { CancellationFormComponent } from './form12/cancellation-form/cancellation-form.component';
 import { PaymentMoratoriumFormComponent } from './form13/payment-moratorium-form/payment-moratorium-form.component';
+import { AccompanistCardFormComponent } from './form14/accompanist-card-form/accompanist-card-form.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { PaymentMoratoriumFormComponent } from './form13/payment-moratorium-form
     OperativeReportFormComponent,
     EngagementFormComponent,
     CancellationFormComponent,
-    PaymentMoratoriumFormComponent
+    PaymentMoratoriumFormComponent,
+    AccompanistCardFormComponent
   ],
   imports: [
     BrowserModule,

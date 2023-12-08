@@ -1,0 +1,94 @@
+<form [formGroup]="accompanistCardForm" (ngSubmit)="onSubmit()" enctype="multipart/form-data" novalidate>
+
+    <!-- Structure -->
+    <div class="form-row">
+      <label for="structure">Structure :</label>
+      <input id="structure" formControlName="structure" type="text" class="form-control">
+    </div>
+
+  <!-- Service -->
+  <div class="form-row">
+    <label for="service">Service :</label>
+    <input id="service" formControlName="service" type="text" class="form-control">
+  </div>
+
+  <!-- Photo Upload -->
+  <div class="form-row">
+    <label for="photo">Insérer une photo :</label>
+    <input id="photo" formControlName="photo" type="file" class="form-control">
+  </div>
+
+  <!-- NIUP -->
+  <div class="form-row">
+    <label for="niup">NIUP :</label>
+    <input id="niup" formControlName="niup" type="text" class="form-control">
+  </div>
+
+  <!-- Nom et prénom du patient -->
+  <div class="form-row">
+    <label for="patientName">Nom et prénom du patient :</label>
+    <input id="patientName" formControlName="patientName" type="text" class="form-control">
+  </div>
+
+  <!-- Date d'entrée -->
+  <div class="form-row">
+    <label for="admissionDate">Date d'entrée :</label>
+    <input id="admissionDate" formControlName="admissionDate" type="date" class="form-control">
+  </div>
+
+  <!-- Service - Salle (pavillon) et Lit -->
+  <div class="form-row">
+    <div class="form-field">
+      <label for="servicePavilion">Service - Salle (pavillon) :</label>
+      <input id="servicePavilion" formControlName="servicePavilion" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="bedNumber">Lit :</label>
+      <input id="bedNumber" formControlName="bedNumber" type="text" class="form-control">
+    </div>
+  </div>
+
+  <!-- Prénom et nom de l'accompagnateur -->
+  <div class="form-row">
+    <label for="accompanistName">Prénom Nom accompagnateur :</label>
+    <input id="accompanistName" formControlName="accompanistName" type="text" class="form-control">
+  </div>
+
+  <!-- Numéro CIN/passeport -->
+  <div class="form-row">
+    <label for="idPassportNumber">Numéro CIN/passeport :</label>
+    <input id="idPassportNumber" formControlName="idPassportNumber" type="text" class="form-control">
+  </div>
+
+  <!-- Adresse et Téléphone -->
+  <div class="form-row">
+    <label for="address">Adresse :</label>
+    <input id="address" formControlName="address" type="text" class="form-control">
+    <label for="phone">Tel :</label>
+    <input id="phone" formControlName="phone" type="tel" class="form-control">
+  </div>
+
+  <!-- Lien de parenté avec le patient -->
+  <div class="form-row">
+    <label for="relationship">Lien de parenté avec le patient(e) :</label>
+    <input id="relationship" formControlName="relationship" type="text" class="form-control">
+  </div>
+
+  <!-- Date d'expiration -->
+  <div class="form-row">
+    <label for="expirationDate">Date d'expiration :</label>
+    <input id="expirationDate" formControlName="expirationDate" type="date" class="form-control">
+  </div>
+
+  <!-- Suppléants (nom prénoms/ NCNI/ Adresse/TEL) -->
+  <div class="form-row">
+    <label for="substitutes">Suppléants (nom prénoms/ NCNI/ Adresse/TEL) :</label>
+    <textarea id="substitutes" formControlName="substitutes" class="form-control"></textarea>
+  </div>
+
+  <!-- Bouton de soumission -->
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre la carte</button>
+  </div>
+
+</form>
