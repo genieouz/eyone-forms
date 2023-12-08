@@ -1,0 +1,144 @@
+<form [formGroup]="referenceForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-row">
+    <label for="structure">STRUCTURE :</label>
+    <input id="structure" formControlName="structure" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="niup">NIUP :</label>
+    <input id="niup" formControlName="niup" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="firstName">Prénom :</label>
+      <input id="firstName" formControlName="firstName" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="lastName">Nom :</label>
+      <input id="lastName" formControlName="lastName" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="birthDate">Date de naissance :</label>
+      <input id="birthDate" formControlName="birthDate" type="date" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="age">Âge :</label>
+      <input id="age" formControlName="age" type="number" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="sex">Sexe :</label>
+      <select id="sex" formControlName="sex" class="form-control">
+        <option value="Male">Masculin</option>
+        <option value="Female">Féminin</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="address">Adresse :</label>
+    <input id="address" formControlName="address" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="admissionDate">Date d'entrée :</label>
+      <input id="admissionDate" formControlName="admissionDate" type="date" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="transferDate">Date de transfert :</label>
+      <input id="transferDate" formControlName="transferDate" type="date" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="transferTime">Heure de transfert :</label>
+    <input id="transferTime" formControlName="transferTime" type="time" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="reason">Motifs :</label>
+    <textarea id="reason" formControlName="reason" class="form-control"></textarea>
+  </div>
+
+<!-- ... autres champs du formulaire déjà définis -->
+
+<!-- Constantes -->
+<div class="form-row">
+  <label>Constantes :</label>
+</div>
+<div class="form-row" formGroupName="constants">
+  <div class="form-field">
+    <label for="bloodPressure">TA (Tension Artérielle) :</label>
+    <input id="bloodPressure" formControlName="bloodPressure" type="text" class="form-control">
+  </div>
+  <div class="form-field">
+    <label for="heartRate">Pouls :</label>
+    <input id="heartRate" formControlName="heartRate" type="text" class="form-control">
+  </div>
+  <div class="form-field">
+    <label for="temperature">Température :</label>
+    <input id="temperature" formControlName="temperature" type="text" class="form-control">
+  </div>
+  <div class="form-field">
+    <label for="respiratoryRate">Fréquence Respiratoire :</label>
+    <input id="respiratoryRate" formControlName="respiratoryRate" type="text" class="form-control">
+  </div>
+  <div class="form-field">
+    <label for="weight">Poids :</label>
+    <input id="weight" formControlName="weight" type="text" class="form-control">
+  </div>
+  <div class="form-field">
+    <label for="spO2">SPO2 :</label>
+    <input id="spO2" formControlName="spO2" type="text" class="form-control">
+  </div>
+  <div class="form-field">
+    <label for="bloodGlucose">Blood Glucose :</label>
+    <input id="bloodGlucose" formControlName="bloodGlucose" type="text" class="form-control">
+  </div>
+</div>
+
+<!-- Examen à l'entrée -->
+<div class="form-row">
+  <label for="examEntry">Examen Entrée :</label>
+  <textarea id="examEntry" formControlName="examEntry" class="form-control"></textarea>
+</div>
+
+<!-- Traitement déjà institué -->
+<div class="form-row">
+  <label for="treatmentInstituted">Traitement déjà institué :</label>
+  <textarea id="treatmentInstituted" formControlName="treatmentInstituted" class="form-control"></textarea>
+</div>
+
+<!-- Moyen de transport -->
+<div class="form-row">
+  <label for="transportMeans">Moyen de transport :</label>
+  <select id="transportMeans" formControlName="transportMeans" class="form-control">
+    <option value="SAMU">SAMU</option>
+    <option value="ambulanceMedicalisee">Ambulance médicalisée</option>
+    <!-- ... autres options -->
+  </select>
+</div>
+
+<!-- Personnel Accompagnant -->
+<div class="form-row" formGroupName="accompanyingPersonnel">
+  <div class="form-field">
+    <label for="accompanyingPersonnelName">Nom du Personnel Accompagnant :</label>
+    <input id="accompanyingPersonnelName" formControlName="name" type="text" class="form-control">
+  </div>
+  <div class="form-field">
+    <label for="accompanyingPersonnelQualification">Qualification :</label>
+    <input id="accompanyingPersonnelQualification" formControlName="qualification" type="text" class="form-control">
+  </div>
+</div>
+
+
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre la fiche</button>
+  </div>
+
+</form>

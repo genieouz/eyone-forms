@@ -6,6 +6,7 @@ import { EngagementFormComponent } from './form11/engagement-form/engagement-for
 import { CancellationFormComponent } from './form12/cancellation-form/cancellation-form.component';
 import { PaymentMoratoriumFormComponent } from './form13/payment-moratorium-form/payment-moratorium-form.component';
 import { AccompanistCardFormComponent } from './form14/accompanist-card-form/accompanist-card-form.component';
+import { ReferenceFormComponent } from './form15/reference-form/reference-form.component';
 import { TechnicalNoteFormComponent } from './form2/technical-note-form/technical-note-form.component';
 import { InternalSupervisionFormComponent } from './form3/internal-supervision-form/internal-supervision-form.component';
 import { TrainingThemeSheetFormComponent } from './form4/training-theme-sheet-form/training-theme-sheet-form.component';
@@ -71,6 +72,10 @@ const routes: Routes = [
   {
     path: "accompanist-card",
     component: AccompanistCardFormComponent
+  },
+  {
+    path: "reference",
+    component: ReferenceFormComponent
   }
 ];
 
