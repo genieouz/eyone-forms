@@ -1,0 +1,88 @@
+<form [formGroup]="medicalLegalReportForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-row">
+    <label for="structure">Structure:</label>
+    <input id="structure" formControlName="structure" type="text">
+  </div>
+
+  <!-- <div class="form-row">
+    <label for="laboratory">Laboratoire d’Anatomie et de Cytologie Pathologiques:</label>
+    <input id="laboratory" formControlName="laboratory" type="text">
+  </div>
+
+  <div class="form-row">
+    <label for="reportNumber">N° de rapport:</label>
+    <input id="reportNumber" formControlName="reportNumber" type="text">
+  </div> -->
+
+  <div class="form-row">
+    <label for="personNamed">N° registre concernant le(la) nommé(e):</label>
+    <input id="personNamed" formControlName="personNamed" type="text">
+  </div>
+
+  <div class="form-row">
+    <label for="practitionerInput">Praticiens:</label>
+    <input id="practitionerInput" #practitionerInput type="text" class="form-control">
+    <button type="button" (click)="addPractitioner(practitionerInput.value); practitionerInput.value='';">Ajouter</button>
+  </div>
+
+  <ul>
+    <li *ngFor="let practitioner of practitioners.controls; let i = index">
+      {{ practitioner.value }} <button type="button" (click)="practitioners.removeAt(i)">Supprimer</button>
+    </li>
+  </ul>
+
+  <div class="form-row">
+    <label for="requisitionNumber">Sur réquisition numéro:</label>
+    <input id="requisitionNumber" formControlName="requisitionNumber" type="text">
+  </div>
+
+  <div class="form-row">
+    <label for="examinationDate">Avons procédé ce jour:</label>
+    <input id="examinationDate" formControlName="examinationDate" type="date">
+  </div>
+
+  <!-- <div class="form-row">
+    <label for="examinationTime">Heure:</label>
+    <input id="examinationTime" formControlName="examinationTime" type="time">
+  </div> -->
+
+  <div class="form-row">
+    <label for="subjectSex">Sexe du sujet:</label>
+    <select id="subjectSex" formControlName="subjectSex">
+      <option value="">Sélectionner</option>
+      <option value="male">Masculin</option>
+      <option value="female">Féminin</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label for="externalExamination">EXAMEN EXTERNE:</label>
+    <textarea id="externalExamination" formControlName="externalExamination"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="internalExamination">EXAMEN INTERNE:</label>
+    <textarea id="internalExamination" formControlName="internalExamination"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="additionalExaminations">AUTRES EXAMENS ANATOMO-PATHOLOGIQUE CONCLUSION:</label>
+    <textarea id="additionalExaminations" formControlName="additionalExaminations"></textarea>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="madeAt">Fait à:</label>
+      <input id="madeAt" formControlName="madeAt" type="text">
+    </div>
+
+    <div class="form-field">
+      <label for="date">Date:</label>
+      <input id="date" formControlName="date" type="date">
+    </div>
+  </div>
+
+  <button type="submit">Soumettre le rapport</button>
+
+</form>

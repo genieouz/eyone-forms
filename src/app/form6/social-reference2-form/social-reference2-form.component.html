@@ -1,0 +1,103 @@
+<form [formGroup]="socialReferenceForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <!-- Structure de référence -->
+  <div class="form-row">
+    <label for="referenceStructure">Structure de référence :</label>
+    <select id="referenceStructure" formControlName="referenceStructure" class="form-control">
+      <!-- Les options seront générées dynamiquement -->
+    </select>
+  </div>
+
+  <!-- Prénom et Nom du client -->
+  <div class="form-row">
+    <label for="clientName">Prénom et Nom du client :</label>
+    <input id="clientName" formControlName="clientName" type="text" class="form-control" list="clients-list">
+    <!-- La liste de clients sera générée dynamiquement -->
+    <datalist id="clients-list">
+      <option value="Client 1"></option>
+      <option value="Client 2"></option>
+    </datalist>
+  </div>
+
+  <!-- Âge du client -->
+  <div class="form-row">
+    <div class="form-field">
+      <label for="clientAge">Âge :</label>
+      <input id="clientAge" formControlName="clientAge" type="number" class="form-control">
+    </div>
+
+      <!-- Sexe du client -->
+    <div class="form-field">
+      <label for="clientSex">Sexe :</label>
+      <select id="clientSex" formControlName="clientSex" class="form-control">
+        <option value="Male">Masculin</option>
+        <option value="Female">Féminin</option>
+      </select>
+    </div>
+
+    <!-- Adresse du client -->
+    <div class="form-field">
+      <label for="clientAddress">Adresse :</label>
+      <input id="clientAddress" formControlName="clientAddress" type="text" class="form-control">
+    </div>
+  </div>
+
+
+
+
+  <!-- Motif de la référence -->
+  <div class="form-row">
+    <label for="referenceReason">Motif de la référence :</label>
+    <input id="referenceReason" formControlName="referenceReason" type="text" class="form-control">
+  </div>
+
+  <!-- Résumé de l'enquête sociale -->
+  <div class="form-row">
+    <label for="socialInquirySummary">Résumé de l'enquête sociale :</label>
+    <textarea id="socialInquirySummary" formControlName="socialInquirySummary" class="form-control"></textarea>
+  </div>
+
+  <!-- Actions déjà menées par la structure référente -->
+  <div class="form-row">
+    <label for="actionsTaken">Actions déjà menées par la structure référente :</label>
+    <textarea id="actionsTaken" formControlName="actionsTaken" class="form-control"></textarea>
+  </div>
+
+  <!-- Contacts du référent -->
+  <div class="form-row">
+    <div class="form-field">
+      <label for="referentContactPhone">Téléphone du référent :</label>
+      <input id="referentContactPhone" formControlName="referentContactPhone" type="tel" class="form-control">
+    </div>
+
+    <div class="form-field">
+      <label for="referentContactEmail">Email du référent :</label>
+      <input id="referentContactEmail" formControlName="referentContactEmail" type="email" class="form-control">
+    </div>
+  </div>
+
+  <!-- Fait à / Date -->
+  <div class="form-row">
+    <div class="form-field">
+      <label for="madeAt">Fait à :</label>
+      <input id="madeAt" formControlName="madeAt" type="text" class="form-control">
+    </div>
+
+    <div class="form-field">
+      <label for="date">Date :</label>
+      <input id="date" formControlName="date" type="date" class="form-control">
+    </div>
+  </div>
+
+  <!-- Pièces jointes (PJ) -->
+  <div class="form-row">
+    <label for="pj">PJ :</label>
+    <input id="pj" type="file" (change)="onFileSelected($event)" multiple class="form-control">
+  </div>
+
+  <!-- Bouton de soumission -->
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre la fiche</button>
+  </div>
+
+</form>

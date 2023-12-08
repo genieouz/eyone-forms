@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormService } from 'src/app/form.service';
 import { SocialCounterReferenceService } from './social-counter-reference.service';
 
 @Component({
@@ -11,7 +12,10 @@ export class SocialCounterReferenceFormComponent {
   form: FormGroup;
   selectedFiles: any;
 
-  constructor(private service: SocialCounterReferenceService) {
+  constructor(
+    private service: SocialCounterReferenceService,
+    private formService: FormService
+  ) {
     this.form = new FormGroup({
       referenceStructureId: new FormControl('', Validators.required),
       welcomingStructure: new FormControl('', Validators.required),
@@ -41,7 +45,7 @@ export class SocialCounterReferenceFormComponent {
         }
       });
 
-      this.service.submitSocialCounterReference(formData).subscribe(
+      this.formService.submitForm(formData, "").subscribe(
         response => console.log(response),
         error => console.error(error)
       );

@@ -1,0 +1,94 @@
+<form [formGroup]="engagementForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-row">
+    <label for="structure">Structure :</label>
+    <input id="structure" formControlName="structure" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="title">Je soussigné(e) :</label>
+      <select id="title" formControlName="title" class="form-control">
+        <option value="Mr">Monsieur</option>
+        <option value="Mme">Madame</option>
+        <option value="Mlle">Mademoiselle</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label for="fullName">Nom complet :</label>
+      <input id="fullName" formControlName="fullName" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="address">Demeurant à (adresse) :</label>
+    <input id="address" formControlName="address" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="phone">N° de téléphone :</label>
+      <input id="phone" formControlName="phone" type="tel" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="identityNumber">N° CIN ou passeport :</label>
+      <input id="identityNumber" formControlName="identityNumber" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="hospitalizationExpenses">s'engage à prendre en charge les frais d'hospitalisation de :</label>
+    <input id="hospitalizationExpenses" formControlName="hospitalizationExpenses" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="dossierNumber">n° dossier :</label>
+      <input id="dossierNumber" formControlName="dossierNumber" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="niup">NIUP :</label>
+      <input id="niup" formControlName="niup" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="admissionDate">admis(e) dans le service/unité depuis le :</label>
+      <input id="admissionDate" formControlName="admissionDate" type="date" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="dischargeDate">et sorti(e) le :</label>
+      <input id="dischargeDate" formControlName="dischargeDate" type="date" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="amountInWords">pour un montant de (en lettres et chiffres) :</label>
+      <input id="amountInWords" formControlName="amountInWords" type="text" class="form-control">
+    </div>
+  </div>
+
+  <!-- Situation d'endettement -->
+  <div class="form-row">
+    <label>Situation d'endettement :</label>
+  </div>
+  <div class="form-row">
+    <div class="form-field">
+      <label for="amountDue">Montant dû :</label>
+      <input id="amountDue" formControlName="amountDue" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="amountPaid">Déjà payé :</label>
+      <input id="amountPaid" formControlName="amountPaid" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="balance">Reliquat :</label>
+      <input id="balance" formControlName="balance" type="text" class="form-control">
+    </div>
+  </div>
+
+  <!-- Bouton de soumission -->
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre la fiche</button>
+  </div>
+
+</form>

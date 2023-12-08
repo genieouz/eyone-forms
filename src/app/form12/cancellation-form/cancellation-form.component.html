@@ -1,0 +1,39 @@
+<form [formGroup]="cancellationForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-row">
+    <label for="niup">NIUP :</label>
+    <input id="niup" formControlName="niup" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="patientName">Prénom et nom du patient :</label>
+    <input id="patientName" formControlName="patient" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="serviceProvider">Service prestataire :</label>
+    <input id="serviceProvider" formControlName="serviceProvider" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="billingDate">Date facturation :</label>
+      <input id="billingDate" formControlName="billingDate" type="date" class="form-control">
+    </div>
+
+    <div class="form-field">
+      <label for="receiptNumber">N° de la quittance :</label>
+      <input id="receiptNumber" formControlName="receiptNumber" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="cancellationReason">Motif de l’annulation :</label>
+    <textarea id="cancellationReason" formControlName="cancellationReason" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre le formulaire</button>
+  </div>
+
+</form>

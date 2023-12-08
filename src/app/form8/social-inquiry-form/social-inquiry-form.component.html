@@ -1,0 +1,193 @@
+<form [formGroup]="socialInquiryForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <!-- Section IDENTIFICATION -->
+  <div formGroupName="identification">
+    <label for="uniqueIdentifier">Identifiant unique du patient (IUP):</label>
+    <input id="uniqueIdentifier" formControlName="uniqueIdentifier" type="text">
+
+    <label for="patientFullName">Nom et prénoms du patient:</label>
+    <input id="patientFullName" formControlName="patientFullName" type="text">
+
+    <label for="gender">Sexe:</label>
+    <input id="gender" formControlName="gender" type="text">
+
+    <label for="dateOfBirth">Date de naissance:</label>
+    <input id="dateOfBirth" formControlName="dateOfBirth" type="date">
+
+    <label for="placeOfBirth">Lieu de naissance:</label>
+    <input id="placeOfBirth" formControlName="placeOfBirth" type="text">
+
+    <label for="registrationNumber">N° d'enregistrement (structure):</label>
+    <input id="registrationNumber" formControlName="registrationNumber" type="text">
+
+    <label for="registrationDate">Date d'enregistrement:</label>
+    <input id="registrationDate" formControlName="registrationDate" type="date">
+
+    <label for="service">Service (Menu déroulant):</label>
+    <!-- Le menu déroulant sera rempli avec des données de l'API -->
+    <select id="service" formControlName="service">
+      <!-- options -->
+    </select>
+
+    <label for="request">Prestation (Menu déroulant):</label>
+    <!-- Le menu déroulant sera rempli avec des données de l'API -->
+    <select id="request" formControlName="request">
+      <!-- options -->
+    </select>
+
+    <label for="arrivalDate">Date:</label>
+    <input id="arrivalDate" formControlName="arrivalDate" type="date">
+
+    <label for="arrivalTime">Heure d'arrivée:</label>
+    <input id="arrivalTime" formControlName="arrivalTime" type="time">
+
+    <label for="nationalIdOrPassport">Numéro CNI, passeport ou extrait de naissance:</label>
+    <input id="nationalIdOrPassport" formControlName="nationalIdOrPassport" type="text">
+
+    <label for="currentAddress">Adresse actuelle:</label>
+    <input id="currentAddress" formControlName="currentAddress" type="text">
+
+    <label for="permanentAddress">Adresse habituelle:</label>
+    <input id="permanentAddress" formControlName="permanentAddress" type="text">
+
+    <label for="phoneNumber">N° Tel:</label>
+    <input id="phoneNumber" formControlName="phoneNumber" type="tel">
+
+    <label for="email">Adresse Email:</label>
+    <input id="email" formControlName="email" type="email">
+
+    <label for="educationLevel">Niveau d'étude:</label>
+    <!-- Ce champ peut être un menu déroulant si les options sont fixes -->
+    <input id="educationLevel" formControlName="educationLevel" type="text">
+
+    <label for="profession">Profession:</label>
+    <input id="profession" formControlName="profession" type="text">
+
+    <label for="matricule">Matricule:</label>
+    <input id="matricule" formControlName="matricule" type="text">
+
+    <label for="employer">Employeur:</label>
+    <input id="employer" formControlName="employer" type="text">
+
+    <label for="activityStatus">En activité:</label>
+    <!-- Utilisez des boutons radio ou un menu déroulant pour ce champ -->
+    <input id="activityStatus" formControlName="activityStatus" type="checkbox">
+
+    <label for="otherActivityDetail">Autres (à préciser):</label>
+    <input id="otherActivityDetail" formControlName="otherActivityDetail" type="text">
+
+    <label for="professionalAddress">Adresse Professionnelle:</label>
+    <input id="professionalAddress" formControlName="professionalAddress" type="text">
+
+    <label for="nationality">Nationalité:</label>
+    <input id="nationality" formControlName="nationality" type="text">
+
+    <label for="ethnicity">Ethnie:</label>
+    <input id="ethnicity" formControlName="ethnicity" type="text">
+
+    <label for="maritalStatus">Situation matrimoniale:</label>
+    <!-- Utilisez des boutons radio ou un menu déroulant pour ce champ -->
+    <input id="maritalStatus" formControlName="maritalStatus" type="text">
+
+    <label for="specificSituation">Situation particulière (concubinage, abandonné(e), etc.):</label>
+    <input id="specificSituation" formControlName="specificSituation" type="text">
+
+    <label for="livingArrangement">Monogamie/Polygamie:</label>
+    <!-- Utilisez des boutons radio ou un menu déroulant pour ce champ -->
+    <input id="livingArrangement" formControlName="livingArrangement" type="text">
+
+    <!-- ... Plus de champs ... -->
+  </div>
+
+  <!-- ... Suite de la section IDENTIFICATION ... -->
+
+<!-- Section NOMBRE D'ENFANTS EN CHARGE -->
+<div formArrayName="childrenInCharge">
+  <div *ngFor="let child of childrenArray.controls; let i = index" [formGroupName]="i">
+    <label for="childNumber-{{i}}">Numéro:</label>
+    <input id="childNumber-{{i}}" formControlName="number" type="number">
+
+    <label for="childName-{{i}}">Prénoms et nom:</label>
+    <input id="childName-{{i}}" formControlName="name" type="text">
+
+    <label for="childAge-{{i}}">Age:</label>
+    <input id="childAge-{{i}}" formControlName="age" type="number">
+
+    <label for="childActivity-{{i}}">Activité:</label>
+    <input id="childActivity-{{i}}" formControlName="activity" type="text">
+
+    <label for="childObservations-{{i}}">Observations:</label>
+    <input id="childObservations-{{i}}" formControlName="observations" type="text">
+  </div>
+  <button type="button" (click)="addChildInCharge()">Ajouter un enfant en charge</button>
+</div>
+
+<!-- Section CARACTERISTIQUES DE L'HABITAT -->
+<div formGroupName="habitatCharacteristics">
+  <label for="residentialArea">Quartier résidentiel:</label>
+  <input id="residentialArea" formControlName="residentialArea" type="text">
+
+  <label for="typeOfHousing">Type de l'habitat:</label>
+  <input id="typeOfHousing" formControlName="typeOfHousing" type="text">
+
+  <label for="housingStatus">Statut de l'habitat:</label>
+  <input id="housingStatus" formControlName="housingStatus" type="text">
+</div>
+
+<!-- Section SITUATION SOCIO-ÉCONOMIQUE -->
+<div formGroupName="socioEconomicSituation">
+  <label for="householdFurniture">Mobilier et matériels de maison:</label>
+  <input id="householdFurniture" formControlName="householdFurniture" type="text">
+
+  <label for="exploitationMaterial">Matériel d'exploitation:</label>
+  <input id="exploitationMaterial" formControlName="exploitationMaterial" type="text">
+
+  <label for="regularIncome">Revenus propres et périodicité:</label>
+  <input id="regularIncome" formControlName="regularIncome" type="text">
+
+  <label for="irregularIncome">Revenus d'appoint et périodicité:</label>
+  <input id="irregularIncome" formControlName="irregularIncome" type="text">
+
+  <!-- ... Autres champs de la section situation socio-économique ... -->
+</div>
+
+<!-- Section MOTIF DE LA DEMANDE -->
+<div formGroupName="requestMotivation">
+  <label for="requestReason">Motif de la demande:</label>
+  <!-- Utilisez des cases à cocher ou des boutons radio ici -->
+  <input id="requestReason" formControlName="requestReason" type="text">
+</div>
+
+<!-- Section ANALYSE DU CAS -->
+<div formGroupName="caseAnalysis">
+  <label for="caseStrengths">Forces:</label>
+  <textarea id="caseStrengths" formControlName="caseStrengths"></textarea>
+
+  <label for="caseConstraints">Contraintes:</label>
+  <textarea id="caseConstraints" formControlName="caseConstraints"></textarea>
+</div>
+
+<!-- Section PROPOSITIONS DE SOLUTIONS ET PERSPECTIVES -->
+<div formGroupName="solutionsAndPerspectives">
+  <label for="aidRequestCost">Coût de la demande d'aide:</label>
+  <input id="aidRequestCost" formControlName="aidRequestCost" type="text">
+
+  <label for="partnerIdentification">Identification des partenaires:</label>
+  <input id="partnerIdentification" formControlName="partnerIdentification" type="text">
+
+  <label for="actionsToBeTaken">Actions à entreprendre:</label>
+  <!-- Utilisez un menu déroulant ou des cases à cocher ici -->
+  <textarea id="actionsToBeTaken" formControlName="actionsToBeTaken"></textarea>
+</div>
+
+<!-- Section PLAN DE SUIVI DE L'INTERVENTION -->
+<div formGroupName="interventionFollowUpPlan">
+  <label for="followUpPlan">Plan de suivi de l'intervention:</label>
+  <textarea id="followUpPlan" formControlName="followUpPlan"></textarea>
+</div>
+
+<!-- Bouton de soumission du formulaire -->
+<button type="submit">Soumettre la fiche</button>
+</form>
+
+

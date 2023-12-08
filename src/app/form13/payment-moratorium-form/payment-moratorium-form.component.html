@@ -1,0 +1,94 @@
+<form [formGroup]="paymentMoratoriumForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-row">
+    <label for="structure">Structure :</label>
+    <input id="structure" formControlName="structure" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+
+      <label for="title">Titre :</label>
+      <select id="title" formControlName="title" class="form-control">
+        <option value="">Sélectionner</option>
+        <option value="Mr">Mr</option>
+        <option value="Mme">Mme</option>
+        <option value="Mlle">Mlle</option>
+      </select>
+    </div>
+    <div class="form-field">
+
+      <label for="fullName">Nom complet :</label>
+      <input id="fullName" formControlName="fullName" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+
+      <label for="nci">NCNI :</label>
+      <input id="nci" formControlName="ncni" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+
+      <label for="address">Adresse :</label>
+      <input id="address" formControlName="address" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+
+      <label for="phone">Téléphone :</label>
+      <input id="phone" formControlName="phone" type="tel" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="invoiceNumber">Numéro de facture :</label>
+      <input id="invoiceNumber" formControlName="invoiceNumber" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="admissionDate">Date d'admission :</label>
+      <input id="admissionDate" formControlName="admissionDate" type="date" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="niup">NIUP :</label>
+      <input id="niup" formControlName="niup" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="serviceUnit">Service/Unité :</label>
+    <input id="serviceUnit" formControlName="serviceUnit" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="paymentPeriodicity">Périodicité du paiement :</label>
+      <select id="paymentPeriodicity" formControlName="paymentPeriodicity" type="text" class="form-control">
+        <option value="Quotidien">Quotidien</option>
+        <option value="Hebdomadaire">Hebdomadaire</option>
+        <option value="Mensuel">Mensuel</option>
+        <option value="Mensuel">Mensuelle</option>
+        <option value="Annuelle">Annuelle</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label for="paymentAmount">Montant :</label>
+      <input id="paymentAmount" formControlName="paymentAmount" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="startDate">Date de début versement :</label>
+      <input id="startDate" formControlName="refundStartDate" type="date" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="serviceUnit">Bénéficiaire :</label>
+    <input id="serviceUnit" formControlName="beneficiary" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre le moratoire</button>
+  </div>
+
+</form>

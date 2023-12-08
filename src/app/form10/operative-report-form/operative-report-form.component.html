@@ -1,0 +1,246 @@
+<form [formGroup]="operativeReportForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <!-- Date de l'Acte -->
+  <div class="form-row">
+    <label for="dateOfAct">Date de l'Acte :</label>
+    <input id="dateOfAct" formControlName="dateOfAct" type="date" class="form-control">
+  </div>
+
+  <!-- NIUP -->
+  <div class="form-row">
+    <label for="NIUP">NIUP :</label>
+    <input id="NIUP" formControlName="NIUP" type="text" class="form-control">
+  </div>
+
+  <!-- Check liste d'entrée réalisée -->
+  <div class="form-row">
+    <label>Check liste d'entrée réalisée :</label>
+    <div class="form-check">
+      <input id="entryChecklistCompleted-yes" formControlName="entryChecklistCompleted" type="radio" class="form-check-input" value="yes">
+      <label for="entryChecklistCompleted-yes" class="form-check-label">OUI</label>
+    </div>
+    <div class="form-check">
+      <input id="entryChecklistCompleted-no" formControlName="entryChecklistCompleted" type="radio" class="form-check-input" value="no">
+      <label for="entryChecklistCompleted-no" class="form-check-label">NON</label>
+    </div>
+  </div>
+
+  <!-- Prénom(s) et Nom du Patient -->
+  <div class="form-row">
+    <label for="patientName">Prénom(s) et Nom du Patient :</label>
+    <input id="patientName" formControlName="patientName" type="text" class="form-control">
+  </div>
+
+  <!-- Sexe -->
+  <div class="form-row">
+    <label for="sex">Sexe :</label>
+    <input id="sex" formControlName="sex" type="text" class="form-control">
+  </div>
+
+  <!-- Date de naissance ou âge estimé -->
+  <div class="form-row">
+    <div class="form-field">
+      <label for="dateOfBirth">Date de naissance :</label>
+      <input id="dateOfBirth" formControlName="dateOfBirth" type="date" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="estimatedAge">ou Âge estimé :</label>
+      <input id="estimatedAge" formControlName="estimatedAge" type="number" class="form-control">
+    </div>
+  </div>
+
+  <!-- Résumé clinique -->
+  <div class="form-row">
+    <label for="clinicalSummary">Résumé clinique :</label>
+    <textarea id="clinicalSummary" formControlName="clinicalSummary" class="form-control"></textarea>
+  </div>
+
+  <!-- Diagnostic -->
+  <div class="form-row">
+    <label for="diagnosis">Diagnostic :</label>
+    <textarea id="diagnosis" formControlName="diagnosis" class="form-control"></textarea>
+  </div>
+
+  <!-- Indication -->
+  <div class="form-row">
+    <label for="indication">Indication :</label>
+    <textarea id="indication" formControlName="indication" class="form-control"></textarea>
+  </div>
+
+  <!-- Opérateur principal -->
+  <div class="form-row">
+    <label for="principalSurgeon">Opérateur principal :</label>
+    <select id="principalSurgeon" formControlName="principalSurgeon" class="form-control">
+      <!-- Les options seront générées dynamiquement -->
+      <option value="Chirurgien 1">Chirurgien 1</option>
+      <option value="Chirurgien 2">Chirurgien 2</option>
+    </select>
+  </div>
+
+  <!-- Aides -->
+  <div class="form-row">
+    <label for="assistants">Aides :</label>
+    <input id="assistants" formControlName="assistants" type="text" class="form-control">
+    <button (click)="addAssistant()">Ajouter</button>
+  </div>
+
+  <!-- Affichage de la liste des aides -->
+  <div *ngFor="let assistant of assistants.controls; let i = index" class="form-row">
+    <input [formControlName]="i" type="text" class="form-control">
+    <button (click)="assistants.removeAt(i)">Supprimer</button>
+  </div>
+
+  <!-- Instrumentistes -->
+  <div class="form-row">
+    <label for="instrumentalists">Instrumentistes :</label>
+    <input id="instrumentalists" formControlName="instrumentalists" type="text" class="form-control">
+  </div>
+
+  <!-- Anesthésistes -->
+  <div class="form-row">
+    <label for="anesthesiologists">Anesthésistes :</label>
+    <input id="anesthesiologists" formControlName="anesthesiologists" type="text" class="form-control">
+  </div>
+
+  <!-- Installation -->
+  <div class="form-row">
+    <label for="installation">Installation :</label>
+    <input id="installation" formControlName="installation" type="text" class="form-control">
+  </div>
+
+  <!-- Type d'anesthésie -->
+  <div class="form-row">
+
+    <div class="form-field">
+      <label for="anesthesiaType">Type d'anesthésie :</label>
+      <input id="anesthesiaType" formControlName="anesthesiaType" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="intubationMode">Mode d'intubation :</label>
+      <input id="intubationMode" formControlName="intubationMode" type="text" class="form-control">
+    </div>
+  </div>
+
+  <!-- Temps de clampage -->
+  <div class="form-row">
+    <div class="form-field">
+      <label for="clampingTime">Temps de clampage :</label>
+      <input id="clampingTime" formControlName="clampingTime" type="text" class="form-control">
+    </div>
+    <!-- Temps de CEC -->
+    <div class="form-field">
+      <label for="CECtime">Temps de CEC :</label>
+      <input id="CECtime" formControlName="CECtime" type="text" class="form-control">
+    </div>
+    <!-- Perte sanguine estimée -->
+    <div class="form-field">
+      <label for="estimatedBloodLoss">Perte sanguine estimée (ml) :</label>
+      <input id="estimatedBloodLoss" formControlName="estimatedBloodLoss" type="number" class="form-control">
+    </div>
+  </div>
+
+
+
+  <!-- Liste de matériels utilisés -->
+  <div class="form-row">
+    <label for="materialList">Liste de matériels utilisés :</label>
+    <textarea id="materialList" formControlName="materialList" class="form-control"></textarea>
+  </div>
+
+  <!-- Abord -->
+  <div class="form-row">
+    <label for="approach">Abord :</label>
+    <input id="approach" formControlName="approach" type="text" class="form-control">
+  </div>
+
+  <!-- Explorations -->
+  <div class="form-row">
+    <label for="explorations">Explorations :</label>
+    <textarea id="explorations" formControlName="explorations" class="form-control"></textarea>
+  </div>
+
+  <!-- Gestes -->
+  <div class="form-row">
+    <label for="procedures">Gestes :</label>
+    <textarea id="procedures" formControlName="procedures" class="form-control"></textarea>
+  </div>
+
+  <!-- Incidents/Accidents -->
+  <div class="form-row">
+    <label for="incidentsAccidents">Incidents/Accidents :</label>
+    <textarea id="incidentsAccidents" formControlName="incidentsAccidents" class="form-control"></textarea>
+  </div>
+
+  <!-- Drainage -->
+  <div class="form-row">
+    <label for="drainage">Drainage :</label>
+    <input id="drainage" formControlName="drainage" type="text" class="form-control">
+  </div>
+
+  <!-- Check liste de sortie réalisée -->
+  <div class="form-row">
+    <label>Check liste de sortie réalisée :</label>
+    <div class="form-check">
+      <input id="exitChecklistCompleted-yes" formControlName="exitChecklistCompleted" type="radio" class="form-check-input" value="yes">
+      <label for="exitChecklistCompleted-yes" class="form-check-label">OUI</label>
+    </div>
+    <div class="form-check">
+      <input id="exitChecklistCompleted-no" formControlName="exitChecklistCompleted" type="radio" class="form-check-input" value="no">
+      <label for="exitChecklistCompleted-no" class="form-check-label">NON</label>
+    </div>
+  </div>
+
+  <!-- Fermeture -->
+  <div class="form-row">
+    <label for="closure">Fermeture :</label>
+    <input id="closure" formControlName="closure" type="text" class="form-control">
+  </div>
+
+  <!-- Pansement -->
+  <div class="form-row">
+    <label for="dressing">Pansement :</label>
+    <input id="dressing" formControlName="dressing" type="text" class="form-control">
+  </div>
+
+  <!-- Heure de début et de fin -->
+  <div class="form-row">
+    <div class="form-field">
+      <label for="startTime">Heure de début :</label>
+      <input id="startTime" formControlName="startTime" type="time" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="endTime">heure de fin :</label>
+      <input id="endTime" formControlName="endTime" type="time" class="form-control">
+    </div>
+  </div>
+
+  <!-- Soins post-opératoires -->
+  <div class="form-row">
+    <label for="postoperativeCare">Soins post-opératoires :</label>
+    <textarea id="postoperativeCare" formControlName="postoperativeCare" class="form-control"></textarea>
+  </div>
+
+  <!-- Suites post-opératoires -->
+  <div class="form-row">
+    <label for="postoperativeOutcomes">Suites post-opératoires :</label>
+    <input id="postoperativeOutcomes" formControlName="postoperativeOutcomes" type="text" class="form-control">
+  </div>
+
+  <!-- Etude cyto-bactériologique -->
+  <div class="form-row">
+    <label for="cytobacteriologicalStudy">Etude cyto-bactériologique :</label>
+    <input id="cytobacteriologicalStudy" formControlName="cytobacteriologicalStudy" type="text" class="form-control">
+  </div>
+
+  <!-- Pièce opératoire pour anatomopathologie -->
+  <div class="form-row">
+    <label for="anatomopathologicalExamination">Pièce opératoire pour anatomopathologie :</label>
+    <input id="anatomopathologicalExamination" formControlName="anatomopathologicalExamination" type="text" class="form-control">
+  </div>
+
+  <!-- Bouton de soumission -->
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre le rapport</button>
+  </div>
+
+</form>
