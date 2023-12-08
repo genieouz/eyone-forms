@@ -20,6 +20,7 @@ import { CancellationFormComponent } from './form12/cancellation-form/cancellati
 import { PaymentMoratoriumFormComponent } from './form13/payment-moratorium-form/payment-moratorium-form.component';
 import { AccompanistCardFormComponent } from './form14/accompanist-card-form/accompanist-card-form.component';
 import { ReferenceFormComponent } from './form15/reference-form/reference-form.component';
+import { CounterReferenceFormComponent } from './form16/counter-reference-form/counter-reference-form.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ReferenceFormComponent } from './form15/reference-form/reference-form.c
     CancellationFormComponent,
     PaymentMoratoriumFormComponent,
     AccompanistCardFormComponent,
-    ReferenceFormComponent
+    ReferenceFormComponent,
+    CounterReferenceFormComponent
   ],
   imports: [
     BrowserModule,
