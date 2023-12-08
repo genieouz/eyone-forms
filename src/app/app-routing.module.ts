@@ -8,6 +8,7 @@ import { PaymentMoratoriumFormComponent } from './form13/payment-moratorium-form
 import { AccompanistCardFormComponent } from './form14/accompanist-card-form/accompanist-card-form.component';
 import { ReferenceFormComponent } from './form15/reference-form/reference-form.component';
 import { CounterReferenceFormComponent } from './form16/counter-reference-form/counter-reference-form.component';
+import { TransferFormComponent } from './form17/transfer-form/transfer-form.component';
 import { TechnicalNoteFormComponent } from './form2/technical-note-form/technical-note-form.component';
 import { InternalSupervisionFormComponent } from './form3/internal-supervision-form/internal-supervision-form.component';
 import { TrainingThemeSheetFormComponent } from './form4/training-theme-sheet-form/training-theme-sheet-form.component';
@@ -81,6 +82,10 @@ const routes: Routes = [
   {
     path: "counter-reference",
     component: CounterReferenceFormComponent
+  },
+  {
+    path: "transfer-form",
+    component: TransferFormComponent
   }
 ];
 

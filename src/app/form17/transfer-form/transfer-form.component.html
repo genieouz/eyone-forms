@@ -1,4 +1,4 @@
-<form [formGroup]="referenceForm" (ngSubmit)="onSubmit()" novalidate>
+<form [formGroup]="transferForm" (ngSubmit)="onSubmit()" novalidate>
 
   <div class="form-row">
     <label for="structure">STRUCTURE :</label>
@@ -23,12 +23,12 @@
 
   <div class="form-row">
     <div class="form-field">
-      <label for="birthDate">Date de naissance :</label>
-      <input id="birthDate" formControlName="birthDate" type="date" class="form-control">
-    </div>
-    <div class="form-field">
       <label for="age">Âge :</label>
       <input id="age" formControlName="age" type="number" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="birthDate">Date de naissance :</label>
+      <input id="birthDate" formControlName="birthDate" type="date" class="form-control">
     </div>
     <div class="form-field">
       <label for="sex">Sexe :</label>
@@ -53,11 +53,10 @@
       <label for="transferDate">Date de transfert :</label>
       <input id="transferDate" formControlName="transferDate" type="date" class="form-control">
     </div>
-  </div>
-
-  <div class="form-row">
-    <label for="transferTime">Heure de transfert :</label>
-    <input id="transferTime" formControlName="transferTime" type="time" class="form-control">
+    <div class="form-field">
+      <label for="transferTime">Heure de transfert :</label>
+      <input id="transferTime" formControlName="transferTime" type="time" class="form-control">
+    </div>
   </div>
 
   <div class="form-row">
@@ -102,12 +101,6 @@
   </div>
 </div>
 
-<!-- Examen à l'entrée -->
-<div class="form-row">
-  <label for="examEntry">Examen Entrée :</label>
-  <textarea id="examEntry" formControlName="examEntry" class="form-control"></textarea>
-</div>
-
 <!-- Traitement déjà institué -->
 <div class="form-row">
   <label for="treatmentInstituted">Traitement déjà institué :</label>
@@ -127,15 +120,10 @@
   </select>
 </div>
 
-<!-- Personnel Accompagnant -->
-<div class="form-row" formGroupName="accompanyingPersonnel">
+<div class="form-row">
   <div class="form-field">
-    <label for="accompanyingPersonnelName">Nom du Personnel Accompagnant :</label>
-    <input id="accompanyingPersonnelName" formControlName="name" type="text" class="form-control">
-  </div>
-  <div class="form-field">
-    <label for="accompanyingPersonnelQualification">Qualification :</label>
-    <input id="accompanyingPersonnelQualification" formControlName="qualification" type="text" class="form-control">
+    <label for="referenceStructure">Structure de Référence :</label>
+    <input id="referenceStructure" formControlName="referenceStructure" type="text" class="form-control">
   </div>
 </div>
 

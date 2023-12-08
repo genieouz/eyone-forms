@@ -1,18 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-reference-form',
-  templateUrl: './reference-form.component.html',
-  styleUrls: ['./reference-form.component.scss']
+  selector: 'app-transfer-form',
+  templateUrl: './transfer-form.component.html',
+  styleUrls: ['./transfer-form.component.scss']
 })
-export class ReferenceFormComponent implements OnInit {
-  referenceForm: FormGroup;
+export class TransferFormComponent {
+  transferForm: FormGroup;
 
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.referenceForm = this.fb.group({
+    this.transferForm = this.fb.group({
       structure: ['', Validators.required],
       niup: ['', Validators.required],
       firstName: ['', Validators.required],
@@ -37,16 +37,13 @@ export class ReferenceFormComponent implements OnInit {
       examEntry: [''],
       treatmentInstituted: [''],
       transportMode: [''],
-      accompanyingPersonnel: this.fb.group({
-        name: [''],
-        qualification: ['']
-      }),
+      referenceStructure: [''],
     });
   }
 
   onSubmit(): void {
-    console.log(this.referenceForm.value);
-    if (this.referenceForm.valid) {
+    console.log(this.transferForm.value);
+    if (this.transferForm.valid) {
       // Envoie des données du formulaire, par exemple à une API
     } else {
       console.log('Form is not valid');
