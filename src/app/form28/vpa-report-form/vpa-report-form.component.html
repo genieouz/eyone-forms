@@ -1,0 +1,103 @@
+<form [formGroup]="vpaReportForm" (ngSubmit)="onSubmit()">
+
+  <div class="form-row">
+    <label for="vpaNumber">Numéro VPA :</label>
+    <input id="vpaNumber" type="text" formControlName="vpaNumber" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="structure">Structure :</label>
+    <select id="structure" formControlName="structure" class="form-control">
+      <option value="">Sélectionnez une structure</option>
+      <option value="Structure 1">Structure 1</option>
+      <option value="Structure 2">Structure 2</option>
+      <option value="Structure 3">Structure 3</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label for="fileNumber">N° Dossier :</label>
+    <input id="fileNumber" type="text" formControlName="fileNumber" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="niup">NIUP :</label>
+    <input id="niup" type="text" formControlName="niup" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="lastName">Nom :</label>
+    <input id="lastName" type="text" formControlName="lastName" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="firstName">Prénom :</label>
+    <input id="firstName" type="text" formControlName="firstName" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="maidenName">Nom de jeune fille :</label>
+    <input id="maidenName" type="text" formControlName="maidenName" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="birthdate">Date de naissance :</label>
+    <input id="birthdate" type="date" formControlName="birthdate" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="age">Âge :</label>
+    <input id="age" type="number" formControlName="age" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="sex">Sexe :</label>
+    <select id="sex" formControlName="sex" class="form-control">
+      <option value="">Sélectionner</option>
+      <option value="F">Féminin</option>
+      <option value="M">Masculin</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label for="allergies">Allergies :</label>
+    <textarea id="allergies" formControlName="allergies" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="date">Date :</label>
+    <input id="date" type="date" formControlName="date" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="diagnosis">Diagnostic :</label>
+    <textarea id="diagnosis" formControlName="diagnosis" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="intervention">Intervention :</label>
+    <textarea id="intervention" formControlName="intervention" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="observations">Observations :</label>
+    <textarea id="observations" formControlName="observations" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="anesthesiaType">Type Anesthésie :</label>
+    <input id="anesthesiaType" type="text" formControlName="anesthesiaType" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="conclusion">Conclusion :</label>
+    <textarea id="conclusion" formControlName="conclusion" class="form-control"></textarea>
+  </div>
+
+
+
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+  </div>
+
+</form>

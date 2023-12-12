@@ -1,0 +1,67 @@
+<form [formGroup]="oesoGastroDuodenoscopyReportForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-row">
+    <label for="structure">Structure :</label>
+    <select id="structure" formControlName="structure" class="form-control">
+      <option value="">Sélectionnez une structure</option>
+      <option value="Structure 1">Structure 1</option>
+      <option value="Structure 2">Structure 2</option>
+      <option value="Structure 3">Structure 3</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label for="indication">Indication :</label>
+    <textarea id="indication" formControlName="indication" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="technique">Technique :</label>
+    <textarea id="technique" formControlName="technique" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="oesophagus">Oesophage :</label>
+    <textarea id="oesophagus" formControlName="oesophagus" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="cardia">Cardia :</label>
+    <textarea id="cardia" formControlName="cardia" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="stomach">Estomac :</label>
+    <textarea id="stomach" formControlName="stomach" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="pylorus">Pylore :</label>
+    <textarea id="pylorus" formControlName="pylorus" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="duodenum">Duodenum :</label>
+    <textarea id="duodenum" formControlName="duodenum" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="gestures">Gestes :</label>
+    <textarea id="gestures" formControlName="gestures" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="conclusion">Conclusion :</label>
+    <textarea id="conclusion" formControlName="conclusion" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="recommendations">Recommandations :</label>
+    <textarea id="recommendations" formControlName="recommendations" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre le compte rendu</button>
+  </div>
+
+</form>

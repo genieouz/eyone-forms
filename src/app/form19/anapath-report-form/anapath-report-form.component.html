@@ -1,0 +1,42 @@
+<form [formGroup]="anapathReportForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-row">
+    <label for="structure">Structure :</label>
+    <select id="structure" formControlName="structure" class="form-control">
+      <option value="">Sélectionnez une structure</option>
+      <option value="Structure 1">Structure 1</option>
+      <option value="Structure 2">Structure 2</option>
+      <option value="Structure 3">Structure 3</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label for="anapathNumber">N° Anapath :</label>
+    <input id="anapathNumber" formControlName="anapathNumber" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="macroscopy">Macroscopie :</label>
+    <textarea id="macroscopy" formControlName="macroscopy" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="microscopy">Microscopie :</label>
+    <textarea id="microscopy" formControlName="microscopy" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="immunohistochemistry">Immunohistochimie :</label>
+    <textarea id="immunohistochemistry" formControlName="immunohistochemistry" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="conclusion">Conclusion :</label>
+    <textarea id="conclusion" formControlName="conclusion" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre le compte rendu</button>
+  </div>
+
+</form>

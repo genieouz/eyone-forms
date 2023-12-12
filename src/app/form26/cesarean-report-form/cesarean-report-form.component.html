@@ -1,0 +1,264 @@
+<form [formGroup]="cesareanReportForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-row">
+    <label for="structure">Structure :</label>
+    <select id="structure" formControlName="structure" class="form-control">
+      <option value="">Sélectionnez une structure</option>
+      <option value="Structure 1">Structure 1</option>
+      <option value="Structure 2">Structure 2</option>
+      <option value="Structure 3">Structure 3</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="firstName">Prénoms :</label>
+      <input id="firstName" formControlName="firstName" type="text" class="form-control">
+    </div>
+
+    <div class="form-field">
+      <label for="lastName">Nom :</label>
+      <input id="lastName" formControlName="lastName" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="address">Adresse :</label>
+      <input id="address" formControlName="address" type="text" class="form-control">
+    </div>
+
+    <div class="form-field">
+      <label for="phone">Téléphone :</label>
+      <input id="phone" formControlName="phone" type="tel" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="operator">Opérateur :</label>
+      <input id="operator" formControlName="operator" type="text" class="form-control">
+    </div>
+
+    <div class="form-field">
+      <label for="assistant">Aide :</label>
+      <input id="assistant" formControlName="assistant" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="anesthetist">Anesthésiste :</label>
+      <input id="anesthetist" formControlName="anesthetist" type="text" class="form-control">
+    </div>
+
+    <div class="form-field">
+      <label for="roomNumber">Numéro Salle :</label>
+      <input id="roomNumber" formControlName="roomNumber" type="text" class="form-control">
+    </div>
+  </div>
+    <!-- ...champs précédents... -->
+    <div class="form-row">
+      <div class="form-field">
+        <label for="gestityParity">Gestité – Parité :</label>
+        <input id="gestityParity" formControlName="gestityParity" type="text" class="form-control">
+      </div>
+
+      <div class="form-field">
+        <label for="gestationalAge">Âge gestationnel :</label>
+        <input id="gestationalAge" formControlName="gestationalAge" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="indication">Indication :</label>
+      <input id="indication" formControlName="indication" type="text" class="form-control">
+    </div>
+
+    <div class="form-row">
+      <label for="anesthesiaType">Type d'anesthésie :</label>
+      <input id="anesthesiaType" formControlName="anesthesiaType" type="text" class="form-control">
+    </div>
+
+    <div class="form-row">
+      <label for="abdominalIncisionType">Type incision abdominale :</label>
+      <input id="abdominalIncisionType" formControlName="abdominalIncisionType" type="text" class="form-control">
+    </div>
+
+    <div class="form-row">
+      <label for="abdominalCavityAspect">Aspect cavité abdominale :</label>
+      <input id="abdominalCavityAspect" formControlName="abdominalCavityAspect" type="text" class="form-control">
+    </div>
+
+    <div class="form-row">
+      <label for="hysterotomyType">Type hystérotomie :</label>
+      <input id="hysterotomyType" formControlName="hysterotomyType" type="text" class="form-control">
+    </div>
+
+    <div class="form-row">
+      <label for="amnioticFluidAspect">Aspect du liquide amniotique :</label>
+      <input id="amnioticFluidAspect" formControlName="amnioticFluidAspect" type="text" class="form-control">
+    </div>
+
+    <div class="form-row">
+      <label for="extractionType">Type extraction :</label>
+      <input id="extractionType" formControlName="extractionType" type="text" class="form-control">
+    </div>
+
+    <div class="form-row">
+      <div class="form-field">
+        <label for="babySex">Sexe du bébé :</label>
+        <select id="babySex" formControlName="babySex" class="form-control">
+          <option value="">Sélectionner</option>
+          <option value="F">Féminin</option>
+          <option value="M">Masculin</option>
+        </select>
+      </div>
+
+      <div class="form-field">
+        <label for="babyWeight">Poids :</label>
+        <input id="babyWeight" formControlName="babyWeight" type="text" class="form-control">
+      </div>
+      <div class="form-field">
+        <label for="apgarScore">APGAR :</label>
+        <input id="apgarScore" formControlName="apgarScore" type="text" class="form-control">
+      </div>
+    </div>
+
+
+
+  <div class="form-row">
+    <label for="deliveryType">Type de délivrance :</label>
+    <input id="deliveryType" formControlName="deliveryType" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="uterineRevision">Révision utérine :</label>
+    <input id="uterineRevision" formControlName="uterineRevision" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="hysterotomySutureType">Type suture hystérotomie :</label>
+    <input id="hysterotomySutureType" formControlName="hysterotomySutureType" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="sutureThreadType">Type fils de suture :</label>
+    <input id="sutureThreadType" formControlName="sutureThreadType" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="hemostasisQuality">Qualité de l'hémostase :</label>
+    <input id="hemostasisQuality" formControlName="hemostasisQuality" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="visceralPeritoneumSuture">Suture du péritoine viscéral :</label>
+    <input id="visceralPeritoneumSuture" formControlName="visceralPeritoneumSuture" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="parietalPeritoneumClosure">Fermeture parietale :</label>
+    <input id="parietalPeritoneumClosure" formControlName="parietalPeritoneumClosure" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="parietalPeritoneum">Péritoine pariétal :</label>
+    <input id="parietalPeritoneum" formControlName="parietalPeritoneum" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="aponeurosis">Aponévrose :</label>
+    <input id="aponeurosis" formControlName="aponeurosis" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="subcutaneousTissue">Tissu sous-cutané :</label>
+    <input id="subcutaneousTissue" formControlName="subcutaneousTissue" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="skin">Peau :</label>
+    <input id="skin" formControlName="skin" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="drainage">Drainage :</label>
+    <div class="checkbox-group">
+      <label for="drainageYes">Oui</label>
+      <input id="drainageYes" type="radio" formControlName="drainage" value="true">
+      <label for="drainageNo">Non</label>
+      <input id="drainageNo" type="radio" formControlName="drainage" value="false">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="difficulties">Difficultés :</label>
+    <input id="difficulties" formControlName="difficulties" type="text" class="form-control">
+  </div>
+  <div class="form-row">
+    <div class="form-field">
+      <label for="duration">Durée :</label>
+      <input id="duration" formControlName="duration" type="text" class="form-control">
+    </div>
+
+    <div class="form-field">
+      <label for="bloodLoss">Pertes sanguines :</label>
+      <input id="bloodLoss" formControlName="bloodLoss" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-row">
+      <label for="oxytocics">Ocytociques :</label>
+      <div class="checkbox-group">
+        <label for="oxytocicsYes">Oui</label>
+        <input id="oxytocicsYes" type="radio" formControlName="oxytocics" value="true">
+        <label for="oxytocicsNo">Non</label>
+        <input id="oxytocicsNo" type="radio" formControlName="oxytocics" value="false">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="antibiotics">Antibiotiques :</label>
+      <div class="checkbox-group">
+        <label for="antibioticsYes">Oui</label>
+        <input id="antibioticsYes" type="radio" formControlName="antibiotics" value="true">
+        <label for="antibioticsNo">Non</label>
+        <input id="antibioticsNo" type="radio" formControlName="antibiotics" value="false">
+      </div>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <label for="analgesics">Antalgiques :</label>
+    <div class="checkbox-group" >
+        <label for="analgesicsYes">Oui</label>
+        <input id="analgesicsYes" type="radio" formControlName="analgesics" value="true">
+        <label for="analgesicsNo">Non</label>
+        <input id="analgesicsNo" type="radio" formControlName="analgesics" value="false">
+      </div>
+  </div>
+
+
+  <div class="form-row">
+    <div class="form-row">
+      <label for="transfusion">Transfusion :</label>
+      <div class="checkbox-group">
+        <label for="transfusionYes">Oui</label>
+        <input id="transfusionYes" type="radio" formControlName="transfusion" value="true">
+        <label for="transfusionNo">Non</label>
+        <input id="transfusionNo" type="radio" formControlName="transfusion" value="false">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <label for="numberFlasks">Nombre de flacons :</label>
+      <input id="numberFlasks" formControlName="numberFlasks" type="number" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre le compte rendu</button>
+  </div>
+
+</form>

@@ -6,6 +6,7 @@ body, html {
 }
 
 .sidebar {
+  box-sizing: border-box;
   height: 100%;
   width: 300px;
   position: fixed;
@@ -13,7 +14,8 @@ body, html {
   left: 0;
   background-color: #111;
   overflow-x: hidden;
-  padding-top: 20px;
+  overflow-y: scroll;
+  padding: 20px 0 30px 0;
 }
 
 .sidebar a {

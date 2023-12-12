@@ -1,0 +1,128 @@
+<form [formGroup]="anatomoPathologicalExamForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-row">
+    <label for="structure">Structure :</label>
+    <select id="structure" formControlName="structure" class="form-control">
+      <option value="">Sélectionnez une structure</option>
+      <option value="Structure 1">Structure 1</option>
+      <option value="Structure 2">Structure 2</option>
+      <option value="Structure 3">Structure 3</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="samplingDate">Date du prélèvement :</label>
+      <input id="samplingDate" formControlName="samplingDate" type="date" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="receptionDate">Date de réception :</label>
+      <input id="receptionDate" formControlName="receptionDate" type="date" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="requestingDoctor">Demandé par le Dr :</label>
+      <input id="requestingDoctor" formControlName="requestingDoctor" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="service">Service :</label>
+      <input id="service" formControlName="service" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="niup">NIUP :</label>
+      <input id="niup" formControlName="niup" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="firstName">Prénom :</label>
+      <input id="firstName" formControlName="firstName" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="lastName">Nom :</label>
+      <input id="lastName" formControlName="lastName" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="birthDate">Date de naissance :</label>
+      <input id="birthDate" formControlName="birthDate" type="date" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="sex">Sexe :</label>
+      <select id="sex" formControlName="sex" class="form-control">
+        <option value="">Sélectionner</option>
+        <option value="Male">Masculin</option>
+        <option value="Female">Féminin</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label for="ethnicity">Ethnie :</label>
+      <input id="ethnicity" formControlName="ethnicity" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-field">
+      <label for="profession">Profession :</label>
+      <input id="profession" formControlName="profession" type="text" class="form-control">
+    </div>
+    <div class="form-field">
+      <label for="phone">Phone :</label>
+      <input id="phone" formControlName="phone" type="text" class="form-control">
+    </div>
+  </div>
+  <div class="form-row">
+    <label for="currentAddress">Adresse actuelle :</label>
+    <input id="currentAddress" formControlName="currentAddress" type="text" class="form-control">
+  </div>
+  <div class="form-row">
+
+    <div class="form-field">
+      <label for="permanentAddress">Adresse habituelle :</label>
+      <input id="permanentAddress" formControlName="permanentAddress" type="text" class="form-control">
+    </div>
+  </div>
+
+
+
+  <div class="form-row">
+    <label for="sampledOrgan">Organe prélevé :</label>
+    <input id="sampledOrgan" formControlName="sampledOrgan" type="text" class="form-control">
+  </div>
+
+  <div class="form-row">
+    <label for="samplingType">Nature du prélèvement :</label>
+    <select id="samplingType" formControlName="samplingType" class="form-control">
+      <option value="">Sélectionner la nature du prélèvement</option>
+      <option value="Cyto Ponction">Cyto Ponction</option>
+      <option value="Ponction Aspiration à l’Aiguille">Ponction Aspiration à l’Aiguille</option>
+      <option value="Fine">Fine</option>
+      <option value="Biopsie">Biopsie</option>
+      <option value="Pièce Opératoire Simple">Pièce Opératoire Simple</option>
+      <option value="Pièce Opératoire Complexe">Pièce Opératoire Complexe</option>
+    </select>
+  </div>
+
+
+  <div class="form-row">
+    <label for="operativeDescription">Description de la pièce opératoire :</label>
+    <textarea id="operativeDescription" formControlName="operativeDescription" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="clinicalSummary">Résumé Clinique :</label>
+    <textarea id="clinicalSummary" formControlName="clinicalSummary" class="form-control"></textarea>
+  </div>
+
+
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre la demande</button>
+  </div>
+
+
+</form>

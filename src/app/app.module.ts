@@ -22,6 +22,15 @@ import { AccompanistCardFormComponent } from './form14/accompanist-card-form/acc
 import { ReferenceFormComponent } from './form15/reference-form/reference-form.component';
 import { CounterReferenceFormComponent } from './form16/counter-reference-form/counter-reference-form.component';
 import { TransferFormComponent } from './form17/transfer-form/transfer-form.component';
+import { AnatomoPathologicalExamFormComponent } from './form18/anatomo-pathological-exam-form/anatomo-pathological-exam-form.component';
+import { AnapathReportFormComponent } from './form19/anapath-report-form/anapath-report-form.component';
+import { AnurectoscopyReportFormComponent } from './form20/anurectoscopy-report-form/anurectoscopy-report-form.component';
+import { ColoscopyReportFormComponent } from './form23/coloscopy-report-form/coloscopy-report-form.component';
+import { OesoGastroDuodenoscopyReportFormComponent } from './form24/oeso-gastro-duodenoscopy-report-form/oeso-gastro-duodenoscopy-report-form.component';
+import { RectosigmoidoscopyReportFormComponent } from './form25/rectosigmoidoscopy-report-form/rectosigmoidoscopy-report-form.component';
+import { CesareanReportFormComponent } from './form26/cesarean-report-form/cesarean-report-form.component';
+import { VpaRequestFormComponent } from './form27/vpa-request-form/vpa-request-form.component';
+import { VpaReportFormComponent } from './form28/vpa-report-form/vpa-report-form.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +51,16 @@ import { TransferFormComponent } from './form17/transfer-form/transfer-form.comp
     AccompanistCardFormComponent,
     ReferenceFormComponent,
     CounterReferenceFormComponent,
-    TransferFormComponent
+    TransferFormComponent,
+    AnatomoPathologicalExamFormComponent,
+    AnapathReportFormComponent,
+    AnurectoscopyReportFormComponent,
+    ColoscopyReportFormComponent,
+    OesoGastroDuodenoscopyReportFormComponent,
+    RectosigmoidoscopyReportFormComponent,
+    CesareanReportFormComponent,
+    VpaRequestFormComponent,
+    VpaReportFormComponent
   ],
   imports: [
     BrowserModule,

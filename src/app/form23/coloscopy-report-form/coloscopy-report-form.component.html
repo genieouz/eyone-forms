@@ -1,0 +1,62 @@
+<form [formGroup]="coloscopyReportForm" (ngSubmit)="onSubmit()" novalidate>
+
+  <div class="form-row">
+    <label for="structure">Structure :</label>
+    <select id="structure" formControlName="structure" class="form-control">
+      <option value="">Sélectionnez une structure</option>
+      <option value="Structure 1">Structure 1</option>
+      <option value="Structure 2">Structure 2</option>
+      <option value="Structure 3">Structure 3</option>
+    </select>
+  </div>
+
+  <div class="form-row">
+    <label for="indication">Indication :</label>
+    <textarea id="indication" formControlName="indication" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="preparation">Préparation :</label>
+    <textarea id="preparation" formControlName="preparation" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="tolerance">Tolérance :</label>
+    <textarea id="tolerance" formControlName="tolerance" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="inspection">Inspection :</label>
+    <textarea id="inspection" formControlName="inspection" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="rectalExam">Toucher Rectal :</label>
+    <textarea id="rectalExam" formControlName="rectalExam" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="coloscopy">Coloscopie :</label>
+    <textarea id="coloscopy" formControlName="coloscopy" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="gestures">Gestes :</label>
+    <textarea id="gestures" formControlName="gestures" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="conclusion">Conclusion :</label>
+    <textarea id="conclusion" formControlName="conclusion" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <label for="recommendations">Recommandations :</label>
+    <textarea id="recommendations" formControlName="recommendations" class="form-control"></textarea>
+  </div>
+
+  <div class="form-row">
+    <button type="submit" class="btn btn-primary">Soumettre le compte rendu</button>
+  </div>
+
+</form>
